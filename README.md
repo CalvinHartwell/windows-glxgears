@@ -4,7 +4,7 @@ This repo is a windows port of the common unix opengl application glxgears.
 
 Glxgears is a common tool for testing the OpenGL rendering pipeline and gives a simple fps benchmark from the gears animation.
 
-This particular port is compiled in Visual Studio 2017 and it should be very easy to upgrade this project for newer versions of visual studio (2013/2014+).
+This particular port is compiled in Visual Studio 2017 and it should be very easy to upgrade this project for newer versions of visual studio. 
 
 Unfortunately this tool is now very dated - it makes use of the old style OpenGL fixed rendering pipeline which has been deprecated for a long time (https://www.opengl.org/wiki/Fixed_Function_Pipeline).
 
