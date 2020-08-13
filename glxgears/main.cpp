@@ -59,8 +59,9 @@
 #define False 0
 #define True 1
 
-#if 0
+#if 1
 /* wgl extensions */
+typedef BOOL(APIENTRY* PFNWGLSWAPINTERVALEXTPROC)(int);
 PFNWGLSWAPINTERVALEXTPROC wglSwapIntervalEXT = 0;
 #endif
 
@@ -482,8 +483,8 @@ main(int argc, char *argv[])
 	reshape(300, 300);
 
 /* force vsync off */
-#if 0
-	wglSwapIntervalEXT = wglGetProcAddress("wglSwapIntervalEXT");
+#if 1
+	wglSwapIntervalEXT = (PFNWGLSWAPINTERVALEXTPROC)wglGetProcAddress("wglSwapIntervalEXT");
 	if (!wglSwapIntervalEXT) {
 		printf("warning: wglSwapIntervalEXT missing, cannot force vsync off\n");
 	} else if (!wglSwapIntervalEXT(0)) {
